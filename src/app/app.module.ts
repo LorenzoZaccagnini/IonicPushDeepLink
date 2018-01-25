@@ -6,6 +6,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { OneSignal } from '@ionic-native/onesignal';
+import { Deeplinks } from '@ionic-native/deeplinks';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { HomePage } from '../pages/home/home';
     HomePage
   ],
   providers: [
+    OneSignal,
+    Deeplinks,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
